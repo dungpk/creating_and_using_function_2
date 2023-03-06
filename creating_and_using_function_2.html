@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    document.write(square(5)+'<br>');
+    document.write(acreageCircle(5)+'<br>');
+    document.write(perimeterCircle(5)+'<br>');
+    document.write(factorial(5)+'<br>');
+    document.write(checkNumber("5555")+'<br>');
+    document.write(minValue(3,3,9)+'<br>');
+    document.write(isInt(-5)+'<br>');
+    let array =[4,4,6,2,7,2,7,2];
+    reverseArray(array);
+    document.write(String(array)+'<br>');
+    let arrayChar='abc';
+    let Array =["abc","affa","ffa","fa","abc","abc"]
+    document.write(checkCharinArr(arrayChar,Array)+'<br>');
+
+
+    /****************************************************************************************
+     ******************************* Ham khai bao******************************************
+     **************************************************************************************/
+
+
+    function square(value){
+        return value*value;
+    }
+
+    function acreageCircle(radius){
+        return radius*radius*3.14;
+    }
+    function perimeterCircle(radius) {
+        return 2*3.14*radius;
+    }
+    function factorial(value) {
+        let volume=1;
+        for(let i=1;i<=value;i++)
+        {
+            volume *=i;
+        }return volume;
+    }
+
+    function checkNumber(value)
+    {
+        if (isNaN(value)){
+            return false;
+        }
+        return true;
+    }
+
+    function minValue(a,b,c)
+    {
+        let min = a;
+        if(min>b){
+            min=b;
+        }
+        if(min>c){
+            min =c
+        }
+        return min;
+    }
+    function isInt(value)
+    {
+        if((Math.abs(value)%1)===0 && value>0)
+        {
+            return true;
+        }return false;
+    }
+
+    function swap(a,b){
+    }
+
+    function reverseArray(arr)
+    {
+        for(let i=0;i<(arr.length-1)/2;i++){
+           let temp= arr[i];
+            arr[i]=arr[arr.length-i-1];
+            arr[arr.length-i-1]=temp;
+        }
+    }
+    function checkCharinArr(char, array)
+    {
+        let count=0;
+        for(let i=0;i<array.length;i++)
+        {
+            if(char === array[i]){
+                count++;
+            }
+        }
+        if(count===-0){count=-1}
+        return count;
+    }
+
+
+</script>
+</body>
+</html>
